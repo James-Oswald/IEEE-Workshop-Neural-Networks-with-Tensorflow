@@ -3,7 +3,6 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  #disable Tensorflow warning messages
 
-import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -13,6 +12,7 @@ input_shape = (28, 28, 1)
 
 # the data, split between train and test sets
 (train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
+
 
 # convert class vectors to binary class matrices
 train_labels = keras.utils.to_categorical(train_labels, num_classes)

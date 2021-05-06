@@ -19,6 +19,7 @@ test_images = np.expand_dims(test_images, -1)
 # convert class vectors to binary class matrices
 train_labels = keras.utils.to_categorical(train_labels, num_classes)
 test_labels = keras.utils.to_categorical(test_labels, num_classes)
+
 model = keras.Sequential(
     [
         keras.Input(shape=input_shape),
